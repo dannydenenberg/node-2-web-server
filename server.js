@@ -1,5 +1,10 @@
+// NOTE: If you look in the package.json file, you will see a script called "start". This is called to start the server.
+
 const express = require('express');
 const fs = require('fs'); // file crap
+
+// the || operator means 'or'. Of the PORT enviornment variable does not exist, we will set it to 3000
+const port = process.env.PORT || 3000; // store the port which heroku sets for our app
 
 // for website templates
 const hbs = require('hbs');
@@ -107,7 +112,8 @@ app.get('*', function(req, res) {
 });
 
 
-// start app on port 3000. Optional callback function
-app.listen(3000, function() {
+// Because heroku sets what port to listen on, we are going to use their enviornment variable that heroku sets (process.env.PORT)
+// If you type 'env' on mac, it lists the paths.
+app.listen(port, function() {
   console.log('server is up on port 3000');
 });
