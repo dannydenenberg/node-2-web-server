@@ -91,7 +91,8 @@ app.get('/', function(req, res) {
 app.get('/projects', function(req, res) {
   res.render('projects.hbs', {
     pageTitle: 'Projects',
-    pageHead: '/projects'
+    pageHead: '/projects',
+    welcomeMessage: 'YOU ARE ON THE BEST WEBSITE EVER!!!!!!!!!!!'
   });
 });
 
