@@ -70,28 +70,39 @@ app.get('/', function(req, res) {
   // res.send('<h1>Hello Expres!</h1>');
 
 
-// here i am sending to a template file
-res.render('home.hbs', {
-  pageTitle: 'Home Page',
-  welcomeMessage: "Welcome to my site!",
-})
+  // here i am sending to a template file
+  res.render('home.hbs', {
+    pageTitle: 'Home Page',
+    pageHead: '/'
+    welcomeMessage: "Welcome to my site!",
+  })
 
 
-/**
-  // if you send an object, you can send JSON
-  res.send({
-    name: 'Daniel',
-    likes: ['numbers','biking','food']
+  /**
+    // if you send an object, you can send JSON
+    res.send({
+      name: 'Daniel',
+      likes: ['numbers','biking','food']
+    });
+    **/
+});
+
+
+app.get('/projects', function(req, res) {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects',
+    pageHead: '/projects'
+
   });
-  **/
 });
 
 
 app.get('/about', function(req, res) {
-// render template. The default render folder is views
-   res.render('about.hbs', {
-     pageTitle: 'About Page',
-   });
+  // render template. The default render folder is views
+  res.render('about.hbs', {
+    pageTitle: 'About Page',
+    pageHead: '/about'
+  });
 });
 
 
