@@ -73,9 +73,9 @@ app.get('/', function(req, res) {
   // here i am sending to a template file
   res.render('home.hbs', {
     pageTitle: 'Home Page',
-    pageHead: '/'
-    welcomeMessage: "Welcome to my site!",
-  })
+    pageHead: '/',
+    welcomeMessage: "Welcome to my site!"
+  });
 
 
   /**
@@ -92,7 +92,6 @@ app.get('/projects', function(req, res) {
   res.render('projects.hbs', {
     pageTitle: 'Projects',
     pageHead: '/projects'
-
   });
 });
 
