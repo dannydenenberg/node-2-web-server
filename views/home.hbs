@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Some Website</title>
+  </head>
+  <body>
+    <!-- header piece of reusable code. We store all partials in the views/partials folder -->
+    {{> header}}
+
+    <h1>{{pageTitle}}</h1>
+
+    <!-- `screamIt` is a helper function declared in server.js. To pass parameters to
+          helper functions you write `function-name param1 param2 ....` -->
+    <p>{{screamIt welcomeMessage}}</p>
+
+    {{> footer}} <!-- this adds the footer partial (html) -->
+  </body>
+</html>

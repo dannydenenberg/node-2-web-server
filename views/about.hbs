@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Some Website</title>
+  </head>
+  <body>
+    <!-- header piece of reusable code. We store all partials in the views/partials folder -->
+    {{> header}}
+
+    <h1>{{pageTitle}}</h1>
+    <p>Some text</p>
+
+    {{> footer}} <!-- this adds the footer partial (html) -->
+  </body>
+</html>
